@@ -42,8 +42,6 @@ public class LibraryTest {
 		Book b = new Book("nonexistent");
 		assertDoesNotThrow(() -> lib.removeBook(b), "Error, el método removeBook no debería lanzar excepción cuando es invocado con un libro que no existe en la biblioteca");	
 	}
-
-
 	
 	private void addBooksToLib(Book[] books, Library lib) throws DuplicatedBookException{
 		for (Book book : books) {

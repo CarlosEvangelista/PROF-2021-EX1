@@ -20,10 +20,14 @@ public class Library {
 	}
 	
 	public void removeBook(Book book) {
-		
+		if(this.books.isEmpty()){
+			return;
+		}
 		int position = books.indexOf(book);
+		if(position==-1){
+			return;
+		}
 		books.remove(position);
-			
 	}
 
 	public Book getBook(String title) throws NonExistingBookException, EmptyLibraryException {
